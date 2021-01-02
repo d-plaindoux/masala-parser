@@ -9,6 +9,7 @@ import charsBundleTest from './chars-bundle-test';
 import numberBundleTest from './number-bundle-test';
 import fLayerTest from './f-layer-test';
 import tupleParserTest from './tuple-parser-test';
+import lineTest from './line-test';
 
 export default {
     parserChainTest,
@@ -21,5 +22,6 @@ export default {
     charsBundleTest,
     numberBundleTest,
     fLayerTest,
-    tupleParserTest
+    tupleParserTest,
+    lineTest
 }

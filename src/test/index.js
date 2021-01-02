@@ -17,9 +17,9 @@ import jsonSampleTest from './standard/json/jsonsample_test';
 
 
 export {
+    parserTests,
     dataTests,
     streamTests,
-    parserTests,
     genlexTests,
     jsonParseTest,
     jsonSampleTest

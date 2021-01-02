@@ -92,6 +92,10 @@ class ParserStream extends Stream {
             throw new Error();
         }
     }
+
+    lineAt(offset) {
+        return this.input.lineAt(this.offsets[offset])
+    }
 }
 
 function factory(parser, lowerStream) {

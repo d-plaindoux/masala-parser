@@ -11,6 +11,7 @@ import atry from '../data/try';
 /**
  * Abstract methods:
  * - unsafeGet(index)
+ * - lineAt(offset)
  */
 class Stream {
     constructor() {}

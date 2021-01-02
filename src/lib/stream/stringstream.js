@@ -25,6 +25,11 @@ class StringStream extends Stream {
     unsafeGet(index) {
         return this.source.charAt(index);
     }
+
+    lineAt(offset){
+        const str= this.source.substring(0, offset+1);
+        return (str.match(/\n/g) || '').length + 1;
+    }
 }
 
 function factory(source) {

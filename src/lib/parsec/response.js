@@ -60,11 +60,18 @@ class ParserResponse {
         return this.input.location(this.getOffset());
     }
 
+    line(){
+        return this.input.lineAt(this.getOffset())
+    }
+
     /**
+     * fold, map and flatMap are abstract functions of ParserResponse implemented below
      * fold takes a function to map the value depending on result
      * Abstract function fold(accept, reject)
      *
-     * flatMap is a specialization of fold
+     * map and flatMap is a specialization of fold when it's not rejected. They
+     * transform the value when parsing is good. In case
+     * of reject, map and flatMap always return 'this', leaving the value unchanged.
      */
 }
 

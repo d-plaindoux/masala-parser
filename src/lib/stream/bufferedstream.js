@@ -36,6 +36,11 @@ class BufferedStream extends Stream {
 
         return self.cache[index];
     }
+
+    lineAt(offset) {
+        return this.source.lineAt(offset)
+    }
+
 }
 
 function factory(source) {

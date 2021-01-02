@@ -314,6 +314,11 @@ export interface Response<T> {
      * [[offset]] for low level parsers.
      */
     location(): number;
+
+    /**
+     * Current line of the response
+     */
+    line(): number;
 }
 
 /**

@@ -449,7 +449,7 @@ export default {
         test.equal(response.value, 'abc'); // not tuple([a]) !
         test.done();
     },
-/*
+
     'expect (eos) to be rejected without eating char': function (test) {
 
 
@@ -463,7 +463,20 @@ export default {
         test.equal(response.value, undefined); // not tuple([a]) !
         test.done();
     },
-*/
+
+    'expect (eos) to be rejected without eating char after fail': function (test) {
+
+
+        const parser = F.try(C.char('b').eos()).or(C.char('a'));
+
+        const response =  parser.parse(stream.ofString('ab'));
+
+        test.ok(response.isAccepted(), 'should  be accepted.');
+        test.equal(response.offset, 1);
+        test.equal(response.value, "a"); // not tuple([a]) !
+        test.done();
+    },
+
     'expect (thenEos) to be accepted at the end': function (test) {
         test.expect(1);
         // tests here

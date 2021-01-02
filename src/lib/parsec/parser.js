@@ -109,10 +109,11 @@ export default class Parser {
                     response.accept(accept.value, accept.input, accept.offset, true):
                     response.reject(accept.input, accept.offset, accept.consumed)
             },
-                reject =>
-                    response.reject(
+                reject =>{
+                    return response.reject(
                         reject.input, reject.offset, reject.consumed
-                    ))
+                    )})
+
         );
 
     }
